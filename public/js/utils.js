@@ -14,15 +14,3 @@ export const formatDate = (dateString) => {
         return 'N/A';
     }
 };
-
-export const formatPrice = (price) => {
-    if (price === null || price === undefined) {
-        return '0.00';
-    }
-    if (typeof price === 'number') {
-        return price.toFixed(2);
-    }
-
-    const numericValue = parseFloat(price);
-    return isNaN(numericValue) ? '0.00' : numericValue.toFixed(2);
-};
